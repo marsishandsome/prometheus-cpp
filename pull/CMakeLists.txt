@@ -1,12 +1,12 @@
 
+if(ENABLE_COMPRESSION)
+  find_package(ZLIB REQUIRED)
+endif()
+
 if(USE_THIRDPARTY_LIBRARIES)
   find_package(civetweb-3rdparty CONFIG REQUIRED)
 else()
   find_package(civetweb REQUIRED)
-endif()
-
-if(ENABLE_COMPRESSION)
-  find_package(ZLIB REQUIRED)
 endif()
 
 add_library(pull
